@@ -1,6 +1,28 @@
 .loginContainer{
     background:rgba(191, 191, 191, 0.58);
-    margin-top: 10%;
+    margin-top: 6%;
     border-radius: 15px;
     padding-top: 35px;
+
+
+    form{
+    	label{
+	    	position: absolute;
+		    bottom: 2px;
+		    margin-left: 12px;
+		    color:#009688;
+		    cursor:text;
+    	}
+
+    	label.editing, label:hover,input:hover + label, input:focus + label{
+		    -webkit-transition: .3s ease-in-out;
+		    transition: .3s ease-in-out;
+		    background-image: -webkit-linear-gradient(top, #fff, #fff);
+		    background-size: 100% 7px;
+		    background-repeat: no-repeat;
+		    background-position: center;
+		    transform: translateY(-17px) scale(.8);
+		}	
+    }
+
  }

@@ -1,6 +1,27 @@
+$error-color: #EF8383;
+
+
 .btn.btn-primary{
 	color: #fff;
     background-color: #009688;
     border-color: #009688;
     
+}
+
+.ui.error{
+	    background-color: $error-color;
+	    color: white;
+	    margin-left: 17px;
+	    margin-top: 12px;
+	    padding: 5px;
+	    font-size: 1.2em;
+	    display: inline-block;
+}
+
+.ui.error:before {
+    content: '\25b2';
+    padding-left: 0.5em;
+    position: absolute;
+    margin: -21px 0 0 -15px;
+    color: $error-color;
 }

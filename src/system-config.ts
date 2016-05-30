@@ -36,6 +36,10 @@ const barrels: string[] = [
   'app/components/+login',
   'app/components/+login2',
   'app/components/header',
+  'app/components/input',
+  'app/components/left-side-menu',
+  'app/components/dashboard',
+  'app/components/+dashboard',
   /** @cli-barrel */
 ];
 
