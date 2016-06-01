@@ -40,10 +40,20 @@ const barrels: string[] = [
   'app/components/left-side-menu',
   'app/components/dashboard',
   'app/components/+dashboard',
+  'app/reducers/test-reducer',
   /** @cli-barrel */
 ];
 
-const cliSystemConfigPackages: any = {};
+const cliSystemConfigPackages: any = {
+  '@ngrx/store' : {
+    main: 'index.js',
+    defaultExtension: 'js'
+  },
+  '@ngrx/core' : {
+    main: 'index.js',
+    defaultExtension: 'js'
+  }
+};
 barrels.forEach((barrelName: string) => {
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
@@ -56,6 +66,8 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
+    '@ngrx/store':'vendor/@ngrx/store',
+    '@ngrx/core':'vendor/@ngrx/core',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages
