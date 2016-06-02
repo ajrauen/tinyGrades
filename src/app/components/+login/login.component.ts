@@ -21,7 +21,7 @@ export class LoginComponent {
   loginForm: ControlGroup;
   user: Observable<User>;
 
-  constructor(fb: FormBuilder, private router: Router,public store: Store<any>) {
+  constructor(fb: FormBuilder, private router: Router,private store: Store<any>) {
     this.loginForm = fb.group({
       email: ["", Validators.required],
       password: ["", Validators.required]
