@@ -5,7 +5,7 @@ import { ROUTER_PROVIDERS } from '@angular/router';
 import { provideStore } from '@ngrx/store';
 import {authenticationReducer} from './app/reducers/authentication';
 
-var store:Object = {authenticationReducer:authenticationReducer}
+var store:Object = {authentication:authenticationReducer}
 
 bootstrap(MainComponent,[ROUTER_PROVIDERS,provideStore(store)]    
 );
