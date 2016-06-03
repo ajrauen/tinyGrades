@@ -9,7 +9,9 @@ import { LocalStorageService } from '../../services/local-storage.service'
   moduleId: module.id,
   selector: 'tiny-grades-app',
   template:`<router-outlet></router-outlet>`,
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ROUTER_DIRECTIVES],
+  providers:[LocalStorageService],
+
 })
 
 //Set up the routes
