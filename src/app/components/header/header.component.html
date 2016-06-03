@@ -4,11 +4,10 @@
       <div class="headerIcon"></div>
     </div>
 
-    <div *ngIf(loggedIn) class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div *ngIf(authenticated) class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
         <li>
-        	<div class="btn btn-primary"> asdf</div>
+        	<div class="btn btn-primary" (click)="signOut()">Sign Out</div>
         </li>
       </ul>
     </div>

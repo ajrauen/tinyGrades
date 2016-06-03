@@ -1,4 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
+
+import { LOGOUT } from '../../reducers/authentication';
+import { User } from '../../models/user.model'
+
 
 @Component({
   moduleId: module.id,
@@ -6,13 +13,24 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: 'header.component.html',
   styleUrls: ['header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  loggedIn:boolean = false;
+  authenticated:boolean = false;
+  user: Observable<User>;
 
-  constructor() {}
+  constructor(private router: Router,private store: Store<any>) {
 
-  ngOnInit() {
+    this.user = this.store.select('authentication');
+    this.user.subscribe(
+      data=>{
+        this.authenticated = data.authenticated;
+      })	
+
+  }
+
+  signOut(){
+  	this.store.dispatch({type:LOGOUT});
+  	this.router.navigate(['/login']);
   }
 
 }

@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
+
 import { LoginComponent } from '../+login';
 import { DashboardComponent } from '../+dashboard';
-
-import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
+import { LocalStorageService } from '../../services/local-storage.service'
 
 @Component({
   moduleId: module.id,
@@ -19,11 +20,15 @@ import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
 
 export class MainComponent implements OnInit {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private storageService:LocalStorageService) {}
 
   ngOnInit(){
-    if(true){    //here's where you could check if a user is already logged in.
-    this.router.navigate(['/login']);
+    let auth:Object = this.storageService.get('authenticated');
+    if(auth){    //here's where you could check if a user is already logged in.
+      this.router.navigate(['/dashboard']);
+    }else{
+      this.router.navigate(['/login']);
     }
+
   }
 }
