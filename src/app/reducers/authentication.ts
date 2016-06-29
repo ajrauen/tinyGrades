@@ -7,13 +7,13 @@ export const LOGOUT = 'LOGOUT';
 export const authenticationReducer:any = (state:User = new User(), action:Action) => {
   switch (action.type) {
     case LOGIN:{
-      return Object.assign({},state,{authenticated:true})
+      return Object.assign({},state,{authenticated:true, name:'Darth'})
     }
       
 
     case LOGOUT:{
       state.authenticated = false;
-      return Object.assign({},state,{authenticated:false})
+      return Object.assign({},state,{authenticated:false,name:''})
     }
       
 

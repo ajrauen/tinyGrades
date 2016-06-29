@@ -7,6 +7,12 @@
     <div *ngIf(authenticated) class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
+          <div class="user_container">
+            <i class="fa fa-2x fa-user userIcon" aria-hidden="true"></i>
+            {{userName}}
+          </div>
+        </li>
+        <li>
         	<div class="btn btn-primary" (click)="signOut()">Sign Out</div>
         </li>
       </ul>

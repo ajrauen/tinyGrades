@@ -40,7 +40,8 @@ const barrels: string[] = [
   'app/components/left-side-menu',
   'app/components/dashboard',
   'app/components/+dashboard',
-  'app/reducers/test-reducer',
+  'app/widget',
+  'app/components/widget',
   /** @cli-barrel */
 ];
 
@@ -52,6 +53,9 @@ const cliSystemConfigPackages: any = {
   '@ngrx/core' : {
     main: 'index.js',
     defaultExtension: 'js'
+  },
+  'lodash':{
+    format: 'cjs'
   }
 };
 barrels.forEach((barrelName: string) => {
@@ -68,7 +72,9 @@ System.config({
     'rxjs': 'vendor/rxjs',
     '@ngrx/store':'vendor/@ngrx/store',
     '@ngrx/core':'vendor/@ngrx/core',
-    'main': 'main.js'
+    'main': 'main.js',
+    'lodash': 'vendor/lodash/lodash.js'
+
   },
   packages: cliSystemConfigPackages
 });

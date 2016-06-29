@@ -16,7 +16,8 @@ import { User } from '../../models/user.model'
 export class HeaderComponent {
 
   authenticated:boolean = false;
-  user: Observable<User>;
+  userName:String = "";
+  user: Observable<any>;
 
   constructor(private router: Router,private store: Store<any>) {
 
@@ -24,6 +25,7 @@ export class HeaderComponent {
     this.user.subscribe(
       data=>{
         this.authenticated = data.authenticated;
+        this.userName = data.name;
       })	
 
   }

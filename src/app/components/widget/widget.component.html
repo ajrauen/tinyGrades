@@ -1,0 +1,44 @@
+<div class="widget" [ngClass]="{'flipped':isFlipped}">
+	<div class="front" >
+		<div class="header">
+			<div class="title">
+				<label>{{type}}</label>
+				<i class="fa fa-chevron-right fa-2x icon" aria-hidden="true"></i>
+			</div>
+			<div class="left">
+				<i class="fa fa-reply fa-2x icon" aria-hidden="true" (click)="onFlip()"></i>
+				<i class="fa fa-times fa-2x icon" aria-hidden="true" (click)="onFlip()"></i>
+			</div>
+		</div>
+		<div class="content">
+			{{data}}
+		</div>
+
+		<div class="footer">
+			<div class="left">
+				<div class="btn btn-primary">Upload</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="back">
+		<div class="header">
+			<div class="title">
+				<label>Math</label>
+				<i class="fa fa-chevron-right fa-2x icon" aria-hidden="true"></i>
+			</div>
+			<div class="left">
+				<i class="fa fa-reply fa-2x icon" aria-hidden="true" (click)="onFlip()"></i>
+				<i class="fa fa-times fa-2x icon" aria-hidden="true" (click)="onFlip()"></i>
+			</div>
+		</div>
+		<div class="content">
+				HERE IS A DUMMY ASSIGNMENT DESCRIPTION
+		</div>
+		<div class="footer">
+			
+		</div>
+
+	</div>
+</div>

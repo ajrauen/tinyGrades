@@ -13,7 +13,10 @@ module.exports = function(defaults) {
       'rxjs/**/*.+(js|js.map)',
       '@angular/**/*.+(js|js.map)',
       'bootstrap/**/*.+(css)',
-      '@ngrx/**/*.*'      
+      '@ngrx/**/*.*',
+      'font-awesome/**/*',
+      'packery/dist/packery.pkgd.js',
+      'lodash/lodash.js'
     ]
   });
 };
